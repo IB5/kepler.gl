@@ -164,6 +164,13 @@ export function layerConfigChangeUpdater(state, action) {
   return updateStateWithLayerAndData(newState, {layer: newLayer, idx});
 }
 
+export function incrementLayerVersionUpdater(state) {
+  return {
+    ...state,
+    layerVersion: state.layerVersion + 1
+  }
+}
+
 export function layerTypeChangeUpdater(state, action) {
   const {oldLayer, newType} = action;
   const oldId = oldLayer.id;

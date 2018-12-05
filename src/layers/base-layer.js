@@ -657,7 +657,6 @@ export default class Layer {
       if (!newFilter || scaleType !== SCALE_TYPES.ordinal) {
         const {domain} = channel;
         const updatedDomain = this.calculateLayerDomain(dataset, channel);
-
         this.updateLayerConfig({[domain]: updatedDomain});
       }
     });

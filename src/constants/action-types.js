@@ -51,6 +51,7 @@ const ActionTypes = keyMirror({
   SET_FILTER_PLOT: null,
   LOAD_FILES: null,
   LOAD_FILES_ERR: null,
+  INCREMENT_LAYER_VERSION: null,
 
   // mapState
   UPDATE_MAP: null,

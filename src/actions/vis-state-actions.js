@@ -234,3 +234,9 @@ export function loadFilesErr(error) {
     error
   };
 }
+
+export function increamentLayerVersion() {
+  return {
+    type: ActionTypes.INCREMENT_LAYER_VERSION
+  }
+}

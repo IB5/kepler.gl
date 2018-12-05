@@ -391,7 +391,8 @@ export default function MapContainerFactory(MapPopover, MapControl) {
         interactionConfig,
         clicked,
         hoverInfo,
-        layerVersion
+        layerVersion,
+        visStateActions
       } = this.props;
       const {dataTemplateUrl: dataUrl} = dataset;
       const objectHovered = clicked || hoverInfo;
@@ -403,7 +404,9 @@ export default function MapContainerFactory(MapPopover, MapControl) {
         layerVersion,
         objectHovered,
         mapState,
-        interactionConfig
+        interactionConfig,
+        dataset,
+        updateVisData: visStateActions.updateVisData
       })
     }
 
