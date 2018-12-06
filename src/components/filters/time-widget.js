@@ -158,9 +158,6 @@ export class TimeWidget extends Component {
             <AnimationSpeedToggle
               updateAnimationSpeed={(speed) => updateAnimationSpeed(enlargedIdx, speed)}
               speed={filter.speed}/>
-            <IconRoundSmall>
-              <Close height="12px" onClick={() => enlargeFilter(enlargedIdx)} />
-            </IconRoundSmall>
           </TopSectionWrapper>
           <TimeRangeFilter
             filter={filter}
