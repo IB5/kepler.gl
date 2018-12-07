@@ -61,7 +61,7 @@ const TopSectionWrapper = styled.div`
   }
   
   .bottom-widget__field-select {
-    width: 160px;
+    width: 0px;
     display: inline-block;
   }
 `;
@@ -138,13 +138,16 @@ export class TimeWidget extends Component {
               <SelectTextBold>{filter.name}</SelectTextBold>
             </StyledTitle>
             <StyledTitle className="bottom-widget__y-axis">
+              <CenterFlexbox className="bottom-widget__icon">
+                <LineChart height="15px"/>
+              </CenterFlexbox>
               <div className="bottom-widget__field-select">
                 <FieldSelector
                   fields={this.yAxisFieldsSelector(this.props)}
                   placement="top"
                   id="selected-time-widget-field"
                   value={filter.yAxis ? filter.yAxis.name : null}
-                  onSelect={value => setFilterPlot(enlargedIdx, {yAxis: value})}
+                  // onSelect={value => setFilterPlot(enlargedIdx, {yAxis: value})}
                   inputTheme="secondary"
                   placeholder=""
                   erasable
