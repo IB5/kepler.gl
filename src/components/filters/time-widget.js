@@ -137,24 +137,6 @@ export class TimeWidget extends Component {
               </CenterFlexbox>
               <SelectTextBold>{filter.name}</SelectTextBold>
             </StyledTitle>
-            <StyledTitle className="bottom-widget__y-axis">
-              <CenterFlexbox className="bottom-widget__icon">
-                <LineChart height="15px"/>
-              </CenterFlexbox>
-              <div className="bottom-widget__field-select">
-                <FieldSelector
-                  fields={this.yAxisFieldsSelector(this.props)}
-                  placement="top"
-                  id="selected-time-widget-field"
-                  value={filter.yAxis ? filter.yAxis.name : null}
-                  onSelect={value => setFilterPlot(enlargedIdx, {yAxis: value})}
-                  inputTheme="secondary"
-                  placeholder="Select Y Axis"
-                  erasable
-                  showToken={false}
-                />
-              </div>
-            </StyledTitle>
             <AnimationSpeedToggle
               updateAnimationSpeed={(speed) => updateAnimationSpeed(enlargedIdx, speed)}
               speed={filter.speed}/>
