@@ -146,8 +146,8 @@ export class TimeWidget extends Component {
                   value={filter.yAxis ? filter.yAxis.name : null}
                   onSelect={value => setFilterPlot(enlargedIdx, {yAxis: value})}
                   inputTheme="secondary"
-                  placeholder= ""
-                  erasable={true}
+                  placeholder=""
+                  erasable
                   showToken={false}
                 />
               </div>
